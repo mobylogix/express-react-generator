@@ -149,7 +149,7 @@ function createApplication (name, path) {
   mkdir(path, function () {
 
     childProcess.exec('npm i -g create-react-app')
-    childProcess.exec(`create-react-app ./${name}/client`)
+    childProcess.exec(`create-react-app ${path}/${name}/client`)
 
     mkdir(path + '/server', function () {
       write(path + '/server/index.js', app.render())
@@ -209,10 +209,10 @@ function createApplication (name, path) {
     // write files
     write(path + '/package.json', JSON.stringify(pkg, null, 2) + '\n')
     write(path + '/README.md', README)
-    write(path + '/dev-server.sh', app.render())
 
     copyTemplate('js/gitignore', path + '/.gitignore')
     copyTemplate('js/babelrc', path + '/.babelrc')
+    copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
 
     complete()
   })
