@@ -29,10 +29,5 @@ cd ..
 
 echo "Client setup completed.."
 
-echo "Your app is setup, you can open new tab and run client by using command\n\n"
-echo "cd client && npm start"
-
-echo "Server is running on http://localhost:3002"
-
 chmod +x ./dev-server.sh
 ./dev-server.sh
