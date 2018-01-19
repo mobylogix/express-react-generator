@@ -211,10 +211,11 @@ function createApplication (name, path) {
 
     copyTemplate('js/gitignore', path + '/.gitignore')
     copyTemplate('js/babelrc', path + '/.babelrc')
+    copyTemplate('js/env', path + '/.eenv')
+    copyTemplate('js/env.example', path + '/.env.example')
+
     copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
     copyTemplate('js/setup.sh', path + '/setup.sh')
-
-    childProcess.exec(`cd ${path} && chmod +x start.sh && chmod +x dev-server.sh && ./setup.sh`)
 
     complete()
   })
