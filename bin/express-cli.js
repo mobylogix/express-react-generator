@@ -126,6 +126,7 @@ function createApplication (name, path) {
     console.log()
     console.log('   install dependencies:')
     console.log('     %s cd %s && npm install', prompt, path)
+    console.log('     %s cd %s/client && npm install', prompt, path)
     console.log()
     console.log('   run the app:')
 
