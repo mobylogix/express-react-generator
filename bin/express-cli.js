@@ -149,7 +149,7 @@ function createApplication (name, path) {
   mkdir(path, function () {
 
     childProcess.exec('npm i -g create-react-app')
-    childProcess.exec(`create-react-app ${path}/${name}/client`)
+    childProcess.exec(`create-react-app ${path}/client`)
 
     mkdir(path + '/server', function () {
       write(path + '/server/index.js', app.render())
