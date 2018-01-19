@@ -49,7 +49,6 @@ program
   .name('express')
   .version(version, '    --version')
   .usage('[options] [dir]')
-  .option('    --git', 'add .gitignore')
   .option('-f, --force', 'force on non-empty directory')
   .parse(process.argv)
 
@@ -213,6 +212,9 @@ function createApplication (name, path) {
     copyTemplate('js/gitignore', path + '/.gitignore')
     copyTemplate('js/babelrc', path + '/.babelrc')
     copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
+    copyTemplate('js/setup.sh', path + '/setup.sh')
+
+    childProcess.exec(`cd ${path} && chmod +x start.sh && chmod +x dev-server.sh`)
 
     complete()
   })

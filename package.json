@@ -1,6 +1,6 @@
 {
   "name": "express-react-generator",
-  "description": "Express' application generator with create-react-app and socket.io",
+  "description": "Express application generator with create-react-app",
   "version": "1.0.0",
   "author": "Arslan Nasir <arslan@mobylogix.com>",
   "keywords": [
@@ -31,7 +31,7 @@
   "main": "bin/express-cli.js",
   "preferGlobal": true,
   "bin": {
-    "express": "./bin/express-cli.js"
+    "express-react": "./bin/express-cli.js"
   },
   "devDependencies": {
     "eslint": "3.19.0",
@@ -55,8 +55,6 @@
     "templates/"
   ],
   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec --bail --check-leaks test/",
-    "test-ci": "mocha --reporter spec --check-leaks test/"
+    "lint": "eslint ."
   }
 }
