@@ -19,10 +19,10 @@ Create the app:
 $ express-react /tmp/foo && cd /tmp/foo
 ```
 
-Install dependencies:
+Setup server and client:
 
 ```bash
-$ npm install
+$ bash setup.sh
 ```
 
 Start your react app at `http://localhost:3000/`:
