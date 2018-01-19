@@ -214,7 +214,7 @@ function createApplication (name, path) {
     copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
     copyTemplate('js/setup.sh', path + '/setup.sh')
 
-    childProcess.exec(`cd ${path} && chmod +x start.sh && chmod +x dev-server.sh`)
+    childProcess.exec(`cd ${path} && chmod +x start.sh && chmod +x dev-server.sh && ./setup.sh`)
 
     complete()
   })
