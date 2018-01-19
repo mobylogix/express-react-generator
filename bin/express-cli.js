@@ -46,9 +46,9 @@ before(program, 'unknownOption', function () {
 })
 
 program
-  .name('express')
+  .name('express-react')
   .version(version, '    --version')
-  .usage('[options] [dir]')
+  .usage('[dir]')
   .option('-f, --force', 'force on non-empty directory')
   .parse(process.argv)
 
