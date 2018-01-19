@@ -211,7 +211,7 @@ function createApplication (name, path) {
 
     copyTemplate('js/gitignore', path + '/.gitignore')
     copyTemplate('js/babelrc', path + '/.babelrc')
-    copyTemplate('js/env', path + '/.eenv')
+    copyTemplate('js/env', path + '/.env')
     copyTemplate('js/env.example', path + '/.env.example')
 
     copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
