@@ -11,8 +11,7 @@
     "rest",
     "restful",
     "app",
-    "create-react-app",
-    "socket.io"
+    "create-react-app"
   ],
   "repository": "mobylogix/express-react-generator",
   "license": "MIT",
@@ -20,6 +19,8 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "child_process": "^1.0.2",
     "commander": "2.11.0",
     "create-react-app": "^1.5.1",
     "ejs": "^2.5.7",

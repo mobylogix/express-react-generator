@@ -8,7 +8,7 @@ var program = require('commander')
 var readline = require('readline')
 var sortedObject = require('sorted-object')
 var util = require('util')
-var cmd = require('node-cmd')
+var childProcess = require('child_process')
 
 var MODE_0666 = parseInt('0666', 8)
 var MODE_0755 = parseInt('0755', 8)
@@ -147,11 +147,16 @@ function createApplication (name, path) {
 
   mkdir(path, function () {
 
-    cmd.run('create-react-app client')
+    childProcess.exec('npm i -g create-react-app')
+    childProcess.exec(`create-react-app ./${name}/client`)
 
-    mkdir(path + '/routes', function () {
-      copyTemplate('js/routes/index.js', path + '/routes/index.js')
-      complete()
+    mkdir(path + '/server', function () {
+      write(path + '/server/index.js', app.render())
+
+      mkdir(path + '/server/routes', function () {
+        copyTemplate('js/routes/index.js', path + '/server/routes/index.js')
+        complete()
+      })
     })
 
     // package.json
@@ -164,8 +169,8 @@ function createApplication (name, path) {
         node: '6.11.x'
       },
       scripts: {
-        start: 'babel-node --presets env app.js',
-        'start-dev': 'babel-watch --presets env app.js'
+        start: 'babel-node --presets env server',
+        'start-dev': 'babel-watch --presets env server'
       },
       cacheDirectories: [
         'node_modules',
@@ -184,6 +189,7 @@ function createApplication (name, path) {
         'body-parser': '~1.18.2',
         'babel-cli': '~6.26.0',
         'babel-core': '~6.26.0',
+        'babel-preset-es2015': '~6.24.1',
         'babel-preset-env': '~1.6.1',
         'express': '~4.15.5',
         'socket.io': '~2.0.4',
@@ -201,7 +207,6 @@ function createApplication (name, path) {
 
     // write files
     write(path + '/package.json', JSON.stringify(pkg, null, 2) + '\n')
-    write(path + '/app.js', app.render())
     write(path + '/README.md', README)
     write(path + '/dev-server.sh', app.render())
 

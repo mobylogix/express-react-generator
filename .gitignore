@@ -3,3 +3,4 @@ temp/
 npm-debug.log
 package-lock.json
 .idea/
+dist/
