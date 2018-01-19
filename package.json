@@ -1,0 +1,61 @@
+{
+  "name": "express-react-generator",
+  "description": "Express' application generator with create-react-app and socket.io",
+  "version": "1.0.0",
+  "author": "Arslan Nasir <arslan@mobylogix.com>",
+  "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "app",
+    "create-react-app",
+    "socket.io"
+  ],
+  "repository": "mobylogix/express-react-generator",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "commander": "2.11.0",
+    "create-react-app": "^1.5.1",
+    "ejs": "^2.5.7",
+    "mkdirp": "0.5.1",
+    "node-cmd": "^3.0.0",
+    "sorted-object": "2.0.1"
+  },
+  "main": "bin/express-cli.js",
+  "preferGlobal": true,
+  "bin": {
+    "express": "./bin/express-cli.js"
+  },
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "mocha": "2.5.3",
+    "rimraf": "2.5.4",
+    "supertest": "1.2.0",
+    "tree-kill": "1.2.0",
+    "validate-npm-package-name": "2.2.2"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "files": [
+    "LICENSE",
+    "bin/",
+    "templates/"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "mocha --reporter spec --check-leaks test/"
+  }
+}
