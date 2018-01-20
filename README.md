@@ -52,7 +52,7 @@ This generator can also be further configured with the following command line fl
 
 ### [Mobylogix](https://www.mobylogix.com)
 
-[![Mobylogix Hire Logo](https://s3.amazonaws.com/mobylogix/hire-button-small.png)](https://www.mobylogix.com/work-with-us/)
+[![Mobylogix Hire Logo](https://s3.amazonaws.com/mobylogix/hire-button.png)](https://www.mobylogix.com/work-with-us/)
 
 
 Follow us for the latest updates<br>
