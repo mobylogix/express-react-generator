@@ -50,7 +50,7 @@ This generator can also be further configured with the following command line fl
 
 ## Contribution
 
-### [Mobylogix](https://www.mobylogix.com)
+### [Team Mobylogix](https://www.mobylogix.com)
 
 [![Mobylogix Hire Logo](https://s3.amazonaws.com/mobylogix/hire-button.png)](https://www.mobylogix.com/work-with-us/)
 
