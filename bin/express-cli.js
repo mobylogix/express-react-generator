@@ -147,6 +147,7 @@ function createApplication (name, path) {
 
   mkdir(path, function () {
 
+    console.log("Setting up client...");
     childProcess.exec('npm i -g create-react-app')
     childProcess.exec(`create-react-app ${path}/client`)
 
@@ -196,6 +197,12 @@ function createApplication (name, path) {
         'socket.io-client': '~2.0.4',
         'underscore': '~1.8.3',
         'dotenv': '~4.0.0'
+      },
+      "devDependencies": {
+        'babel-cli': '~6.26.0',
+        'babel-core': '~6.26.0',
+        'babel-preset-es2015': '~6.24.1',
+        'babel-preset-env': '~1.6.1',
       }
     }
 
@@ -311,7 +318,7 @@ function main () {
 
   // App name
   var appName = createAppName(path.resolve(destinationPath)) || 'hello-world'
-    
+
   // Generate application
   emptyDirectory(destinationPath, function (empty) {
     if (empty || program.force) {
