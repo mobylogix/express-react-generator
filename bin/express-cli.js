@@ -218,11 +218,11 @@ function createApplication (name, path) {
     copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
     copyTemplate('js/setup.sh', path + '/setup.sh')
 
-    console.log("Setting up client...");
+    complete()
+
+    console.log('   \x1b[36mSetting client\x1b[0m : ' + path + '/client');
     childProcess.exec('npm i -g create-react-app')
     childProcess.exec(`create-react-app ${path}/client`)
-
-    complete()
   })
 }
 
