@@ -11,4 +11,4 @@ echo "-------------- www.mobylogix.com --------------------"
 echo "                                                     "
 echo "====================================================="
 
-npm run start-dev
+npm start

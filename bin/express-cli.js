@@ -190,7 +190,6 @@ function createApplication (name, path) {
         'body-parser': '~1.18.2',
         'babel-cli': '~6.26.0',
         'babel-core': '~6.26.0',
-        'babel-preset-es2015': '~6.24.1',
         'babel-preset-env': '~1.6.1',
         'express': '~4.15.5',
         'socket.io': '~2.0.4',
@@ -201,7 +200,6 @@ function createApplication (name, path) {
       "devDependencies": {
         'babel-cli': '~6.26.0',
         'babel-core': '~6.26.0',
-        'babel-preset-es2015': '~6.24.1',
         'babel-preset-env': '~1.6.1',
       }
     }
