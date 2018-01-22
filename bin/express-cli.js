@@ -147,10 +147,6 @@ function createApplication (name, path) {
 
   mkdir(path, function () {
 
-    console.log("Setting up client...");
-    childProcess.exec('npm i -g create-react-app')
-    childProcess.exec(`create-react-app ${path}/client`)
-
     mkdir(path + '/server', function () {
       write(path + '/server/index.js', app.render())
 
@@ -221,6 +217,10 @@ function createApplication (name, path) {
 
     copyTemplate('js/dev-server.sh', path + '/dev-server.sh')
     copyTemplate('js/setup.sh', path + '/setup.sh')
+
+    console.log("Setting up client...");
+    childProcess.exec('npm i -g create-react-app')
+    childProcess.exec(`create-react-app ${path}/client`)
 
     complete()
   })
